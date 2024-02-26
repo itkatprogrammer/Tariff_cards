@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+body {
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    min-width: 170px;
+    min-height: 300px;
+    max-width: 200px;
+    text-align: center;
+    border: 1px solid white;
+   
+    p.nameProperty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        min-height: 20%;
+        border-bottom: 1px solid white;
+    }
+    h2.priceProperty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        min-height: 35%;
+    }
+    p.speedProperty{
+        padding: 20px;
+        background-color: #f6f4f4;
+    }
+    p.limitProperty{
+        display: flex;
+        align-items: center;
+        min-height: 73px;
+        background-color: rgba(237, 225, 225, 0.8117647059);
+    }
+}
+
