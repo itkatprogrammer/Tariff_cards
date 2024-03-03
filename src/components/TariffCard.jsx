@@ -1,21 +1,20 @@
 import st from "./TariffCard.module.scss";
 
 export default function TariffCard(props) {
-  const cardStyle = {
-    transform: "scale(1)",
-    marginRight: "0",
-    boxShadow: "none",
+  const handleClick = () => {
+    props.onClick(props.index);
   };
 
-  if (props.price === "550 руб./мес") {
-    cardStyle.transform = "scale(1.1)";
-    cardStyle.marginRight = "9px";
-    cardStyle.boxShadow =
-      "5px 0px 20px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.2)";
-  }
+  const cardStyle = {
+    transform: props.isClicked ? "scale(1.1)" : "scale(1)",
+    marginRight: props.isClicked ? "9px" : "0",
+    boxShadow: props.isClicked
+      ? "5px 0px 20px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.2)"
+      : "none",
+  };
 
   return (
-    <div className={st.card} style={cardStyle}>
+    <div onClick={handleClick} className={st.card} style={cardStyle}>
       <p
         style={{
           backgroundColor: props.colorName,
